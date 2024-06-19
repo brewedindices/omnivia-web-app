@@ -1,13 +1,14 @@
 import { MongoClient } from 'mongodb';
+import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+
 dotenv.config();
 
-
-const connectDB = async () => {
+const dbConnection = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI, {
-      tlsAllowInvalidCertificates: true,
-      tlsAllowInvalidHostnames: true,
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
     });
     console.log('MongoDB connected...');
   } catch (err) {
@@ -16,4 +17,4 @@ const connectDB = async () => {
   }
 };
 
-module.exports = connectDB;
+export { MongoClient, mongoose, dbConnection };
