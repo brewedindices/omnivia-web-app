@@ -1,6 +1,7 @@
 import { MongoClient } from 'mongodb';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import process from 'process';
 
 dotenv.config();
 

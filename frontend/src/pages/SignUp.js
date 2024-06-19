@@ -20,6 +20,7 @@ function SignUp() {
       await registerUser(formData);
       alert('User registered successfully');
     } catch (error) {
+      console.error('Error registering user:', error);
       alert('Error registering user');
     }
   };
