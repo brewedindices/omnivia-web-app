@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-
+import { MongoClient } from 'mongodb';
+import dotenv from 'dotenv';
 dotenv.config();
+
 
 const connectDB = async () => {
   try {

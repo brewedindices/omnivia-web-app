@@ -17,3 +17,11 @@ export const getUsers = async () => {
     throw error;
   }
 };
+
+export const handleError = async () => {
+  try {
+    // some code
+  } catch (error) {
+    console.error(error);
+  }
+};
